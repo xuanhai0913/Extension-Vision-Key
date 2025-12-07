@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Vision Key</title>
+  <link rel="stylesheet" href="settings.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="../assets/icons/Icon.jpg" alt="Vision Key Logo" class="app-logo">
+      </div>
+      <h1>Vision Key Settings</h1>
+      <p class="subtitle">AI-powered assistant for your browser</p>
+    </header>
+
+    <div class="settings-grid">
+      <!-- API Key Section -->
+      <div class="section">
+        <div class="section-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <h2>Gemini API Key</h2>
+        </div>
+        <p class="description">
+          Required for AI analysis. Stored locally on your device.
+        </p>
+        <div class="input-group">
+          <input type="password" id="apiKey" placeholder="Paste your API key here..." autocomplete="off">
+          <button id="toggleKeyBtn" class="icon-btn" title="Show/Hide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </button>
+        </div>
+        <div class="hint">
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" class="external-link">
+            Get free API Key
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Default Mode -->
+      <div class="section">
+        <div class="section-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <h2>Default Mode</h2>
+        </div>
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="defaultMode" value="tracNghiem" checked>
+            <div class="card-content">
+              <span class="card-title">Multiple Choice</span>
+              <span class="card-desc">Quick answer (A, B, C, D)</span>
+            </div>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="defaultMode" value="tuLuan">
+            <div class="card-content">
+              <span class="card-title">Essay / Problem</span>
+              <span class="card-desc">Detailed step-by-step solution</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Language & Model -->
+      <div class="row">
+        <div class="section">
+          <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+            <h2>Language</h2>
+          </div>
+          <select id="language" class="select-input">
+            <option value="vi" selected>Tiếng Việt</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        <div class="section">
+          <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+              <rect x="9" y="9" width="6" height="6"></rect>
+              <line x1="9" y1="1" x2="9" y2="4"></line>
+              <line x1="15" y1="1" x2="15" y2="4"></line>
+              <line x1="9" y1="20" x2="9" y2="23"></line>
+              <line x1="15" y1="20" x2="15" y2="23"></line>
+              <line x1="20" y1="9" x2="23" y2="9"></line>
+              <line x1="20" y1="14" x2="23" y2="14"></line>
+              <line x1="1" y1="9" x2="4" y2="9"></line>
+              <line x1="1" y1="14" x2="4" y2="14"></line>
+            </svg>
+            <h2>Model</h2>
+          </div>
+          <select id="model" class="select-input">
+            <option value="gemini-2.0-flash-exp" selected>Gemini 2.0 Flash (Fastest)</option>
+            <option value="gemini-1.5-pro">Gemini 1.5 Pro (Recommended)</option>
+            <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Data Management -->
+      <div class="section faded">
+        <div class="section-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <h2>Data & Shortcut</h2>
+        </div>
+        <div class="button-grid">
+          <button id="changeShortcutBtn" class="btn-outline">
+            Keyboard Shortcuts
+          </button>
+          <button id="exportBtn" class="btn-outline">Export</button>
+          <button id="importBtn" class="btn-outline">Import</button>
+          <button id="clearHistoryBtn" class="btn-outline danger-hover">Clear History</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions Footer -->
+    <div class="actions-footer">
+      <button id="resetBtn" class="btn-text danger">Reset Defaults</button>
+      <button id="saveBtn" class="btn-primary-lg">Save Changes</button>
+    </div>
+
+    <div id="status" class="status-toast"></div>
+
+    <footer class="main-footer">
+      <p>Vision Key v1.0.0</p>
+      <div class="links">
+        <a href="https://github.com/xuanhai0913/Extension-Vision-Key" target="_blank">GitHub</a>
+        <a href="https://github.com/xuanhai0913/Extension-Vision-Key/issues" target="_blank">Support</a>
+      </div>
+    </footer>
+  </div>
+
+  <input type="file" id="importFileInput" accept=".json" style="display:none;">
+  <script src="settings.js"></script>
+</body>
+
+</html>
