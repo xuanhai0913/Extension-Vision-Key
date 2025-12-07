@@ -24,6 +24,7 @@ const resultText = document.getElementById('resultText');
 const loadingSection = document.getElementById('loadingSection');
 const errorSection = document.getElementById('errorSection');
 const errorMessage = document.getElementById('errorMessage');
+const emptyState = document.getElementById('emptyState');
 
 const answerMode = document.getElementById('answerMode');
 const expertContext = document.getElementById('expertContext');
@@ -67,9 +68,10 @@ async function handleCapture() {
     // Store captured image
     capturedImageData = dataUrl;
 
-    // Show preview
+    // Show preview and hide empty state
     previewImage.src = dataUrl;
     previewSection.style.display = 'block';
+    if (emptyState) emptyState.style.display = 'none';
 
     // Enable analyze button
     analyzeBtn.disabled = false;
@@ -178,6 +180,8 @@ async function handleRetake() {
 
   // Clear persistent storage
   await chrome.storage.local.remove(['capturedImage', 'analysisResult', 'captureTimestamp']);
+
+  if (emptyState) emptyState.style.display = 'block';
 }
 
 async function handleAnalyze() {
@@ -413,6 +417,7 @@ async function checkStoredData() {
     previewImage.src = capturedImageData;
     previewSection.style.display = 'block';
     analyzeBtn.disabled = false;
+    if (emptyState) emptyState.style.display = 'none';
 
     // Restore analysis result if available
     if (data.analysisResult) {
@@ -443,6 +448,7 @@ async function checkStoredData() {
     }
   } else {
     console.log('No stored data found');
+    if (emptyState) emptyState.style.display = 'block';
   }
 }
 
