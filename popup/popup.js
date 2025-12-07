@@ -74,11 +74,14 @@ async function handleCapture() {
     // Enable analyze button
     analyzeBtn.disabled = false;
 
-    // Update button
+    // Update button (reset state)
     captureBtn.textContent = '📸 Capture Screen';
     captureBtn.disabled = false;
 
     showMessage('Screenshot captured successfully!', 'success');
+
+    // Auto Analyze
+    handleAnalyze();
 
   } catch (error) {
     console.error('Capture failed:', error);
@@ -433,6 +436,10 @@ async function checkStoredData() {
       } else {
         displayResult(result.fullText);
       }
+    } else {
+      // Auto analyze if image exists but no result
+      console.log('No stored result, auto analyzing...');
+      handleAnalyze();
     }
   } else {
     console.log('No stored data found');

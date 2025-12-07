@@ -365,3 +365,21 @@ input:focus, select:focus {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* Footer */
+.popup-footer {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+.popup-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.popup-footer a:hover {
+  text-decoration: underline;
+}
+
