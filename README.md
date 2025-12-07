@@ -4,9 +4,15 @@
 
 ![Vision Key Logo](https://img.shields.io/badge/Vision_Key-AI_Screen_Assistant-purple?style=for-the-badge&logo=google-chrome)
 
-**🌟 Phiên bản gốc cho macOS (Swift):**
-[![GitHub stars](https://img.shields.io/github/stars/xuanhai0913/Vision-Key?style=soft&logo=github&label=Stars&color=yellow)](https://github.com/xuanhai0913/Vision-Key)
-[![GitHub forks](https://img.shields.io/github/forks/xuanhai0913/Vision-Key?style=soft&logo=github&label=Forks&color=orange)](https://github.com/xuanhai0913/Vision-Key)
+### 🌐 Các nền tảng hỗ trợ:
+
+| Nền tảng | Trạng thái | Link tải / Repo |
+|:--------:|:----------:|:----------------|
+|  **macOS Native** |  **Stable** | [**Vision-Key** (Swift)](https://github.com/xuanhai0913/Vision-Key) <br> [![Stars](https://img.shields.io/github/stars/xuanhai0913/Vision-Key?style=social)](https://github.com/xuanhai0913/Vision-Key) |
+|  **Extension** |  **Stable** | [**Chrome/Edge/Brave**](https://github.com/xuanhai0913/Extension-Vision-Key) <br> *(Repo hiện tại)* <br> [![Stars](https://img.shields.io/github/stars/xuanhai0913/Extension-Vision-Key?style=social)](https://github.com/xuanhai0913/Extension-Vision-Key) |
+|  **Windows Native** | 🚧 **Dev** | *Đang phát triển...* |
+
+---
 
 [![Chrome](https://img.shields.io/badge/Chrome-100+-4285F4?style=flat-square&logo=google-chrome)](https://www.google.com/chrome/)
 [![Edge](https://img.shields.io/badge/Edge-Supported-0078D7?style=flat-square&logo=microsoft-edge)](https://www.microsoft.com/edge)
