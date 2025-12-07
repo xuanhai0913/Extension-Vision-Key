@@ -39,19 +39,20 @@ header {
 }
 
 .logo-container {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 16px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  background: white;
+  width: auto;
+  height: 120px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app-logo {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 header h1 {
@@ -385,6 +386,7 @@ input:focus,
 .main-footer .links a:hover {
   color: var(--primary);
 }
+
 /* Github Stats */
 .github-stats {
   display: flex;
@@ -417,4 +419,3 @@ input:focus,
 .stat-item svg {
   color: var(--text-muted);
 }
-
