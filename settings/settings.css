@@ -385,3 +385,36 @@ input:focus,
 .main-footer .links a:hover {
   color: var(--primary);
 }
+/* Github Stats */
+.github-stats {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.stat-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background-color: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.stat-item:hover {
+  background-color: white;
+  border-color: var(--text-muted);
+  text-decoration: none;
+}
+
+.stat-item svg {
+  color: var(--text-muted);
+}
+

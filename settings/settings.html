@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings - Vision Key</title>
+  <title data-i18n="title">Cài đặt - Vision Key</title>
   <link rel="stylesheet" href="settings.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,10 +13,10 @@
   <div class="container">
     <header>
       <div class="logo-container">
-        <img src="../assets/icons/Icon.jpg" alt="Vision Key Logo" class="app-logo">
+        <img src="../assets/icons/Logo.jpg" alt="Vision Key Logo" class="app-logo">
       </div>
-      <h1>Vision Key Settings</h1>
-      <p class="subtitle">AI-powered assistant for your browser</p>
+      <h1 data-i18n="app_name">Cài đặt Vision Key</h1>
+      <p class="subtitle" data-i18n="app_subtitle">Trợ lý AI thông minh cho trình duyệt của bạn</p>
     </header>
 
     <div class="settings-grid">
@@ -28,14 +28,14 @@
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
           </svg>
-          <h2>Gemini API Key</h2>
+          <h2 data-i18n="section_api_key">API Key Gemini</h2>
         </div>
-        <p class="description">
-          Required for AI analysis. Stored locally on your device.
+        <p class="description" data-i18n="desc_api_key">
+          Cần thiết để AI phân tích. Được lưu trữ cục bộ trên thiết bị của bạn.
         </p>
         <div class="input-group">
-          <input type="password" id="apiKey" placeholder="Paste your API key here..." autocomplete="off">
-          <button id="toggleKeyBtn" class="icon-btn" title="Show/Hide">
+          <input type="password" id="apiKey" placeholder="Dán API Key vào đây..." autocomplete="off">
+          <button id="toggleKeyBtn" class="icon-btn" title="Hiện/Ẩn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -45,7 +45,7 @@
         </div>
         <div class="hint">
           <a href="https://aistudio.google.com/app/apikey" target="_blank" class="external-link">
-            Get free API Key
+            <span data-i18n="link_get_key">Lấy API Key miễn phí</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -67,21 +67,21 @@
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          <h2>Default Mode</h2>
+          <h2 data-i18n="section_default_mode">Chế độ Mặc định</h2>
         </div>
         <div class="radio-group">
           <label class="radio-card">
             <input type="radio" name="defaultMode" value="tracNghiem" checked>
             <div class="card-content">
-              <span class="card-title">Multiple Choice</span>
-              <span class="card-desc">Quick answer (A, B, C, D)</span>
+              <span class="card-title" data-i18n="mode_mc_title">Trắc nghiệm</span>
+              <span class="card-desc" data-i18n="mode_mc_desc">Trả lời nhanh (A, B, C, D)</span>
             </div>
           </label>
           <label class="radio-card">
             <input type="radio" name="defaultMode" value="tuLuan">
             <div class="card-content">
-              <span class="card-title">Essay / Problem</span>
-              <span class="card-desc">Detailed step-by-step solution</span>
+              <span class="card-title" data-i18n="mode_essay_title">Tự luận / Giải bài</span>
+              <span class="card-desc" data-i18n="mode_essay_desc">Giải thích chi tiết từng bước</span>
             </div>
           </label>
         </div>
@@ -98,7 +98,7 @@
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
               </path>
             </svg>
-            <h2>Language</h2>
+            <h2 data-i18n="section_language">Ngôn ngữ</h2>
           </div>
           <select id="language" class="select-input">
             <option value="vi" selected>Tiếng Việt</option>
@@ -121,7 +121,7 @@
               <line x1="1" y1="9" x2="4" y2="9"></line>
               <line x1="1" y1="14" x2="4" y2="14"></line>
             </svg>
-            <h2>Model</h2>
+            <h2 data-i18n="section_model">Mô hình AI</h2>
           </div>
           <select id="model" class="select-input">
             <option value="gemini-2.0-flash-exp" selected>Gemini 2.0 Flash (Fastest)</option>
@@ -140,33 +140,56 @@
             <polyline points="17 8 12 3 7 8"></polyline>
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
-          <h2>Data & Shortcut</h2>
+          <h2 data-i18n="section_data">Dữ liệu & Phím tắt</h2>
         </div>
         <div class="button-grid">
-          <button id="changeShortcutBtn" class="btn-outline">
-            Keyboard Shortcuts
+          <button id="changeShortcutBtn" class="btn-outline" data-i18n="btn_shortcut">
+            Phím tắt
           </button>
-          <button id="exportBtn" class="btn-outline">Export</button>
-          <button id="importBtn" class="btn-outline">Import</button>
-          <button id="clearHistoryBtn" class="btn-outline danger-hover">Clear History</button>
+          <button id="exportBtn" class="btn-outline" data-i18n="btn_export">Xuất cài đặt</button>
+          <button id="importBtn" class="btn-outline" data-i18n="btn_import">Nhập cài đặt</button>
+          <button id="clearHistoryBtn" class="btn-outline danger-hover" data-i18n="btn_clear_history">Xóa lịch
+            sử</button>
         </div>
       </div>
     </div>
 
     <!-- Actions Footer -->
     <div class="actions-footer">
-      <button id="resetBtn" class="btn-text danger">Reset Defaults</button>
-      <button id="saveBtn" class="btn-primary-lg">Save Changes</button>
+      <button id="resetBtn" class="btn-text danger" data-i18n="btn_reset">Khôi phục mặc định</button>
+      <button id="saveBtn" class="btn-primary-lg" data-i18n="btn_save">Lưu thay đổi</button>
     </div>
 
     <div id="status" class="status-toast"></div>
 
     <footer class="main-footer">
-      <p>Vision Key v1.0.0</p>
-      <div class="links">
-        <a href="https://github.com/xuanhai0913/Extension-Vision-Key" target="_blank">GitHub</a>
-        <a href="https://github.com/xuanhai0913/Extension-Vision-Key/issues" target="_blank">Support</a>
+      <p>Vision Key v1.0.0 by <a href="https://hailamdev.space/" target="_blank">Nguyễn Xuân Hải</a></p>
+
+      <div class="github-stats" id="githubStats" style="display: none;">
+        <a href="https://github.com/xuanhai0913/Extension-Vision-Key" target="_blank" class="stat-item">
+          <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+          <span id="starCount">...</span> Stars
+        </a>
+        <a href="https://github.com/xuanhai0913/Extension-Vision-Key/fork" target="_blank" class="stat-item">
+          <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z">
+            </path>
+          </svg>
+          <span id="forkCount">...</span> Forks
+        </a>
       </div>
+
+      <div class="links">
+        <a href="https://github.com/xuanhai0913/Extension-Vision-Key" target="_blank">GitHub</a> •
+        <a href="https://github.com/xuanhai0913/Extension-Vision-Key/issues" target="_blank" data-i18n="link_support">Hỗ
+          trợ</a>
+      </div>
+      <p style="font-size: 11px; margin-top: 5px;">License: MIT</p>
     </footer>
   </div>
 
